@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexPlanet Internship – Task 2</title>
+    <link rel="stylesheet" href="Task2.css">
+</head>
+<body>
+<header>
+    <h1>ApexPlanet Internship – Task 2</h1>
+</header>
+
+<nav>
+    <button class="tablink active" onclick="openTab('homeTab', this)">Home</button>
+    <button class="tablink" onclick="openTab('formTab', this)">Contact Form</button>
+    <button class="tablink" onclick="openTab('galleryTab', this)">Image Gallery</button>
+</nav>
+
+<div class="container">
+    <!-- Home Section -->
+    <div id="homeTab" class="tab-content active">
+        <div class="home">
+            <h2>Welcome to My Internship Project 🌐</h2>
+            <p>This mini-website is built as part of my <strong>ApexPlanet Internship</strong>.</p>
+            <p>It demonstrates:</p>
+            <ul>
+                <li>✅ Responsive Layout with Flexbox & Grid</li>
+                <li>✅ Contact Form with JavaScript Validation</li>
+                <li>✅ Dynamic Image Gallery with Add Feature</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div id="formTab" class="tab-content">
+        <h2>Contact Form</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Gallery Section -->
+    <div id="galleryTab" class="tab-content">
+        <h2>Image Gallery</h2>
+        <div class="input-area">
+            <input type="text" id="imageUrl" placeholder="Enter image URL">
+            <button onclick="addImage()">Add Image</button>
+        </div>
+        <div class="gallery" id="gallery">
+            <!-- Default Sample Images -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Sample">
+                <button class="remove-btn" onclick="removeImage(this)">×</button>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Sample">
+                <button class="remove-btn" onclick="removeImage(this)">×</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+    <p>&copy; 2025 ApexPlanet Internship Project | Built by Harshal</p>
+</footer>
+
+<script src="Task2.js"></script>
+</body>
+</html>
