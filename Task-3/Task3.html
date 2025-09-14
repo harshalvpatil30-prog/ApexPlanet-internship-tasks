@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - ApexPlanet Internship</title>
+    <link rel="stylesheet" href="Task3.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <h1>ApexPlanet Internship - Task 3</h1>
+    <nav>
+        <button onclick="showTab('homeTab')">Home</button>
+        <button onclick="showTab('quizTab')">Quiz</button>
+        <button onclick="showTab('apiTab')">Weather</button>
+    </nav>
+</header>
+
+<!-- Home -->
+<section id="homeTab" class="tab-content active">
+    <h2>Welcome 👋</h2>
+    <p>
+        This project demonstrates <strong>Responsive Design</strong>, an
+        <strong>Interactive Quiz</strong>, and <strong>Weather API Fetching</strong>
+        using HTML, CSS, and JavaScript.
+    </p>
+    <img src="images/apspl9-1024x381.png.webp"
+         alt="Sample Home Image"
+         class="home-image">
+</section>
+
+<!-- Quiz -->
+<section id="quizTab" class="tab-content">
+    <h2>Interactive Quiz</h2>
+    <div class="quiz-container">
+        <div id="quiz"></div>
+        <button onclick="submitQuiz()">Submit Quiz</button>
+        <button id="retakeBtn" onclick="retakeQuiz()" style="display:none;">Retake Quiz</button>
+        <p id="quizResult"></p>
+    </div>
+</section>
+
+<!-- Weather -->
+<section id="apiTab" class="tab-content">
+    <h2>Weather Info (API Demo)</h2>
+    <div class="weather-card">
+        <input type="text" id="city" placeholder="Enter city name">
+        <button onclick="fetchWeather()">Get Weather 🌦️</button>
+        <div id="weather"></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 ApexPlanet Internship | Task 3 by Harshal</p>
+</footer>
+
+<script src="Task3.js"></script>
+</body>
+</html>
