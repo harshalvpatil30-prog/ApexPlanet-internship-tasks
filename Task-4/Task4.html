@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4 - ApexPlanet Internship</title>
+    <link rel="stylesheet" href="Task4.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <h1>ApexPlanet Internship - Task 4</h1>
+    <nav>
+        <button onclick="showTab('homeTab')">Home</button>
+        <button onclick="showTab('portfolioTab')">Portfolio</button>
+        <button onclick="showTab('todoTab')">To-Do App</button>
+        <button onclick="showTab('productsTab')">Products</button>
+    </nav>
+</header>
+
+<!-- Home -->
+<section id="homeTab" class="tab-content active">
+    <h2>Welcome 👋</h2>
+    <p>This is <strong>Task-4</strong> combining three projects:</p>
+    <ul>
+        <li>🧑‍💻 Personal Portfolio</li>
+        <li>📝 To-Do List with Local Storage</li>
+        <li>🛒 Product Listing with Filter & Sort</li>
+    </ul>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolioTab" class="tab-content">
+    <h2>My Portfolio</h2>
+    <div class="about">
+        <h3>About Me</h3>
+        <p>Hi, I'm Harshal Patil, a web developer passionate about HTML, CSS, and JavaScript.</p>
+    </div>
+
+    <div class="projects">
+        <h3>Projects</h3>
+        <div class="project-card">
+            <h4>Project 1</h4>
+            <p>A cool project using HTML & CSS</p>
+            <a href="https://github.com/harshalvpatil30-prog/ApexPlanet-internship-tasks/tree/main/Task-1">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h4>Project 2</h4>
+            <p>Interactive JavaScript app</p>
+            <a href="https://harshalvpatil30-prog.github.io/ApexPlanet-internship-tasks/">Live Demo</a>
+        </div>
+    </div>
+
+    <div class="contact">
+        <h3>Contact</h3>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+<!-- To-Do App -->
+<section id="todoTab" class="tab-content">
+    <h2>To-Do List</h2>
+    <div class="todo-container">
+        <input type="text" id="todoInput" placeholder="Add a new task...">
+        <button onclick="addTask()">Add</button>
+        <ul id="todoList"></ul>
+    </div>
+</section>
+
+<!-- Products -->
+<section id="productsTab" class="tab-content">
+    <h2>Product Listing</h2>
+    <div class="filters">
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="all">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="books">Books</option>
+            <option value="clothing">Clothing</option>
+        </select>
+
+        <select id="sortOption" onchange="sortProducts()">
+            <option value="">Sort By</option>
+            <option value="priceLowHigh">Price: Low to High</option>
+            <option value="priceHighLow">Price: High to Low</option>
+            <option value="ratingHighLow">Rating: High to Low</option>
+            <option value="ratingLowHigh">Rating: Low to High</option>
+        </select>
+    </div>
+
+    <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 ApexPlanet Internship | Task 4 by Harshal</p>
+</footer>
+
+<script src="Task4.js"></script>
+</body>
+</html>
